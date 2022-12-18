@@ -31,7 +31,7 @@ class Graph:
  
         while len(open_list) > 0:
             n = None
-            print(f'Open list :{open_list} \n closed_list:{closed_list}')
+            print(f'Open list :{open_list} \nclosed_list:{closed_list}\n')
             for v in open_list:
                 if n == None or g[v] + self.h(v) < g[n] + self.h(n):
                     n = v
@@ -44,7 +44,7 @@ class Graph:
             if n == stop_node:
                 open_list.remove(n)
                 closed_list.add(n)
-                print(f'Open list :{open_list} \n closed_list:{closed_list}')
+                print(f'Open list :{open_list} \nclosed_list:{closed_list}\n')
                 reconst_path = []
  
                 while parents[n] != n:
@@ -81,6 +81,7 @@ class Graph:
  
         print('Path does not exist!')
         return None
+        
 adjacency_list = {
     'A': [('B', 1), ('C', 3), ('D', 7)],
     'B': [('D', 5)],

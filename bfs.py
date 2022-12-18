@@ -25,6 +25,7 @@ def bfs(visited, graph, node,goal):
     while queue:        
         m = queue.pop(0)
         closed_list.append(m)
+        print(f"Open List: {queue}\nClosed list: {closed_list} ")
    
        
    
@@ -45,7 +46,7 @@ def bfs(visited, graph, node,goal):
                 queue.append(neighbour)
                 path[neighbour]=m
            
-        print(f"Open List: {queue}\nClosed list: {closed_list} ")
+       
     print(f'Path :{path}')
  
  
